@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+audio{
+    opacity: 0.0;
+}
+
+audio:hover{
+    opacity: 0.5;
+}
+
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="snake.mp4" type="video/mp4"></video>
+
+<audio controls autoplay loop id="myMusic">
+    <source src="menu.mp3" type="audio/mpeg"></audio>
+
+
+<div class="content">
+  <h1>Welcome, to classic Snake Game</h1>
+  <p>Remember the good old days of early 2000's? I just got the Nokia 1100 and got so many memories of that. And most of those memories are built on top of the snake arcade game it offered. Did you had something similar? If so, and if you feel nostalgic, you're welcome to try our browser based game, with difficulty levels inspired by the original. We don't really have time machine, but why not take the opportunity to jump back to the past!!! Oh, and to listen to an epic song, just hover over the top left corner</p>
+  <button id="myBtn"  onclick="myFunction()">Pause</button>
+  <button id="myBtn"  onclick="window.location.href='experimentail.html';">Difficulty1</button>
+  <button id="myBtn"  onclick="window.location.href='experimentail2.html';">Difficulty2</button>
+  <button id="myBtn"  onclick="window.location.href='experimentail3.html';">Difficulty3</button>
+  <button id="myBtn" onclick="window.location.href='server.php';">Leaderboard</button>
+  <button id="myBtn"  onclick="alert('Press Arrowkeys to move. Spacebar to pause')">Controls</button>
+  <button id="myBtn"  onclick="alert('Produced and presendted by Rhythm Ray & Htee Law Hset')">Credits</button>
+ 
+</div>
+
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+
+
+</body>
+</html>

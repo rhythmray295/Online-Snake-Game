@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Snake</h1>
+    <div id="mainMenu">
+        <div id="leaderB">
+            <!--
+            <?php
+            include("server.php");
+            ?>
+            -->
+        </div>
+
+        <div id="newGame" onclick="newGame()"> NEW GAME </div>
+        <br>
+
+        <div id="leaderButton" onclick="leaderButton()"> LEADERBOARD </div>
+        <div id="leaderB"> </div>
+        <br>
+
+        <div id="controlButton" onclick="controlButton()"> CONTROLS </div>
+        <div id="controls"> Arrow keys to move. <br> Spacebar key to pause. </div>
+        <br>
+
+        <div id="creditButton" onclick="creditButton()"> CREDITS</div>
+        <div id="credits"> Produced by Rythem Ray & Htee Law Hset </div>
+        <br>
+    </div>
+    <div id="buttonReturn" onclick="returnButton()"> RETURN </div>
+    <div id="resumeButton" onclick="resumeButton()"> RESUME </div>
+
+
+
+    <canvas id="game" width="400" height="400" />
+
+
+    <script src="difficulty2.js"></script>
+</body>
+
+</html>
